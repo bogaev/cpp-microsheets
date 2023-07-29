@@ -1,6 +1,6 @@
 # minimum required CMAKE version
 CMAKE_MINIMUM_REQUIRED(VERSION 3.7 FATAL_ERROR)
-project(spreadsheet)
+project(microsheets)
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
@@ -45,10 +45,10 @@ file(GLOB sources
 #                ${ANTLR_FormulaParser_CXX_OUTPUTS})
 
 add_executable(
-  spreadsheet
+  microsheets
   ${ANTLR_FormulaParser_CXX_OUTPUTS}
   ${sources}
 )
 
 # target_link_libraries(demo antlr4_static)
-target_link_libraries(spreadsheet antlr4_static)
+target_link_libraries(microsheets antlr4_static)
